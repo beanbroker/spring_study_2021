@@ -1,13 +1,13 @@
-//package com.pkj.boker.demo.five;
+// package com.pkj.boker.demo.five;
 //
-//import lombok.Getter;
+// import lombok.Getter;
 //
-//@Getter
-//public class SampleException extends RuntimeException {
+// @Getter
+// public class SampleException extends RuntimeException {
 //
 //  public SampleException(String errReason) {
 //    this.errReason = errReason;
 //  }
 //
 //  private String errReason;
-//}
+// }

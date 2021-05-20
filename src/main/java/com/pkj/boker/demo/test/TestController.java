@@ -13,8 +13,7 @@ import java.util.List;
 @RequestMapping("/test")
 public class TestController {
 
-  @Autowired
-  private List<String> abc;
+  @Autowired private List<String> abc;
 
   @GetMapping
   public List<String> abc() {

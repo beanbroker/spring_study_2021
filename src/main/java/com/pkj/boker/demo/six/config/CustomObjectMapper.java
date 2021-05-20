@@ -10,14 +10,16 @@ import java.time.format.DateTimeFormatter;
 
 public class CustomObjectMapper {
 
-    public static ObjectMapper setting(){
-        ObjectMapper objectMapper = new ObjectMapper();
+  public static ObjectMapper setting() {
+    ObjectMapper objectMapper = new ObjectMapper();
 
-        JavaTimeModule javaTimeModule = new JavaTimeModule();
-        javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-        javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-        objectMapper.registerModule(javaTimeModule);
+    JavaTimeModule javaTimeModule = new JavaTimeModule();
+    javaTimeModule.addSerializer(
+        LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    javaTimeModule.addDeserializer(
+        LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    objectMapper.registerModule(javaTimeModule);
 
-        return objectMapper;
-    }
+    return objectMapper;
+  }
 }
